@@ -1,5 +1,5 @@
 =====
-Floki
+Kraken
 =====
 
 Esse é um dos projetos do `Poli Náutico <https://docs.polinautico.com>`_
@@ -16,7 +16,7 @@ Esse é um dos projetos do `Poli Náutico <https://docs.polinautico.com>`_
    seguranca
    
 Ahoy! Bem vindo ao Kraken, maraujos! :
-Nesta guia, iremos mostrar todo o projeto de criação da nossa embarcação tripulada: o Floki.
+Nesta guia, iremos mostrar todo o projeto de criação da nossa embarcação tripulada: o Kraken.
 
 A ideia
 ============
