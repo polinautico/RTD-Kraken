@@ -47,8 +47,11 @@ Como vemos na imagem acima do proprio dispositivo, temos um cilindro maior que �
   :alt: Exemplo de Azimutal
 
 Sendo da seguinte forma:
+
 * os pinos 1 (M1) e 6 (M2) s찾o pinos de tens찾o para o motor
+
 * os pinos 2 (GND encoder) e 5 (3.3v encoder) s찾o pinos de tens찾o para o encoder
+
 * por fim e n찾o menos importante os pinos 4 (C1) e 5 (C2) s찾o pinos de dados do encoder/sensor 
 
 ====
