@@ -44,6 +44,10 @@ Como vemos na imagem acima do proprio dispositivo, temos duas partes do cilindo,
 .. note:: Um sistema de engrenagem de redução servem para diminuir a velocidade de rotação do eixo, por exemplo, enquanto o eixo do motor gira em 750 RPM, e temos um sistema de engrenagens 1:75, o eixo final da caixa de redução irá girar em 1 RPM.
 
 .. _Pinagem:
+
+=====
+Pinagem
+=====
 .. image:: imagens/conexao_motor_dc.png
   :width: 400
   :alt: Exemplo de Azimutal
