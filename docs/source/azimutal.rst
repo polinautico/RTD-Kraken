@@ -20,9 +20,9 @@ Dessa forma com o azimutal, conseguimos girar o motor para a direção desejada,
   :width: 300
   :alt: Exemplo de Azimutal
 
-====
+================
 Projeto para o Kraken
-----
+----------------
  
 Neste ano de 2023, para o Kraken decidimos fazer um sistema similar ao Baleia do ano anterior. O sistema azimutal será composto de três principais componentes:
 
