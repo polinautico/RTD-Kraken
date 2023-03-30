@@ -16,7 +16,7 @@ E porque foi escolhido esse sistema de controle?
 Pois esse sistema substitui o uso do leme, que geralmente em embarcações comuns serve para direcionar o fluxo de água, para assim mover o barco para a direção desejada.
 Dessa forma com o azimutal, conseguimos girar o motor para a direção desejada, dessa forma temos uma melhor manobrabilidade além de conseguir movimentrar o nautimodelo de formas que seriam impossíveis com um leme convencional, como por exemplo dar ré no barco.
 
-.. image:: imagens/Ex_motor_azimutal.png
+.. image:: imagens/Ex_motor_azimutal.jpg
   :width: 400
   :alt: Exemplo de Azimutal
 
