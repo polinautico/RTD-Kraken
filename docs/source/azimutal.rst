@@ -34,6 +34,19 @@ Neste ano de 2023, para o Kraken decidimos fazer um sistema similar ao Baleia do
 Motor com Encoder
 ----
 
+O BTS####, não é uma banda de K-POP, é um motor dc com um sistema de encoder, sistema esse responsavel pelo sensoreamente do motor em si, para dessa forma realizar controle sob o motor, ou seja, o encoder nos fornecerá informações sobre o motor, para calcularmos a posição de seu eixo ou sua velocidade de rotação e assim criarmos algoritimos para controlá-lo da forma desejada.
+
+.. image:: imagens/motor_dc_com_encoder.jpg
+
+Como vemos na imagem acima do proprio dispositivo, temos um cilindro maior que é o sistema eletromagnético do motor, e no cilindro menor temos os dispositivos de sensoriamente, que são nada mais que sensores de efeito hall, também vemos as suas conexões que são 6 pinos. Esses pinos são mostrados abaixo:
+
+.. image:: imagens/conexao_motor_dc.png
+
+Sendo da seguinte forma:
+* os pinos 1 (M1) e 6 (M2) são pinos de tensão para o motor
+* os pinos 2 (GND encoder) e 5 (3.3v encoder) são pinos de tensão para o encoder
+* por fim e não menos importante os pinos 4 (C1) e 5 (C2) são pinos de dados do encoder/sensor 
+
 ====
 Ponte H BTS####
 ----
