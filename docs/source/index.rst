@@ -4,7 +4,7 @@ Kraken
 
 Esse é um dos projetos do `Poli Náutico <https://docs.polinautico.com>`_
 
-.. image:: imagens/logo_kraken.png
+.. image:: imagens/Logo_Kraken.png
 
 --------
 
