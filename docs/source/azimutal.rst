@@ -1,6 +1,6 @@
 Propulsor Azimutal
 ====
-O que significa **Azimutal** e **Porque** usá-lo
+O que significa **Azimutal**? e **Porque** usá-lo?
 ----
 A palavra **azimutal** tem origem da palavra azimute, que significa, "ângulo medido no plano horizontal entre o meridiano do lugar do observador e o plano vertical que contém o ponto observado.", exemplificando, seria o plano horizontal de um observador como vemos na imagem a baixo:
 
