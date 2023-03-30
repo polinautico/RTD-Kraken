@@ -20,9 +20,8 @@ Dessa forma com o azimutal, conseguimos girar o motor para a direção desejada,
   :width: 300
   :alt: Exemplo de Azimutal
 
-================
 Projeto para o Kraken
-----------------
+------
  
 Neste ano de 2023, para o Kraken decidimos fazer um sistema similar ao Baleia do ano anterior. O sistema azimutal será composto de três principais componentes:
 
@@ -30,9 +29,8 @@ Neste ano de 2023, para o Kraken decidimos fazer um sistema similar ao Baleia do
 * Ponte H BTS7960
 * Arduino nano
 
-==================
 Motor com Encoder
-==================
+------
 
 É simplesmente como o nome sugere, um motor dc com um sistema de encoder, sistema esse responsavel pelo sensoreamente do motor em si, para dessa forma realizar controle sob o motor, ou seja, o encoder nos fornecerá informações sobre o motor, para calcularmos a **posição** de seu eixo ou sua **velocidade** de rotação e assim criarmos algoritimos para controlá-lo da forma desejada.
 
@@ -58,9 +56,8 @@ Sendo da seguinte forma:
 
 * por fim e não menos importante os pinos 4 (C1) e 5 (C2) são pinos de dados do encoder/sensor 
 
-================
 Ponte H BTS7960
-================
+------
 
 Escreva aqui
 
@@ -68,14 +65,12 @@ Escreva aqui
   :width: 400
   :alt: Exemplo de Azimutal
 
-================
 Arduino nano
-================
+------
 
 Escreva aqui
 
-================
 Esquema de Conexões 
-================
+------
 
 Escreva aqui
