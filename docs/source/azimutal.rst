@@ -64,6 +64,10 @@ Ponte H BTS7960
 
 Escreva aqui
 
+.. image:: imagens/Ponte_H_bts.png
+  :width: 400
+  :alt: Exemplo de Azimutal
+
 ================
 Arduino nano
 ================
