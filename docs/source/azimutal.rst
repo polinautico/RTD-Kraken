@@ -5,7 +5,7 @@ O que significa **Azimutal** e **Porque** usá-lo
 A palavra **azimutal** tem origem da palavra azimute, que significa, "ângulo medido no plano horizontal entre o meridiano do lugar do observador e o plano vertical que contém o ponto observado.", exemplificando, seria o plano horizontal de um observador como vemos na imagem a baixo:
 
 .. image:: imagens/azimute-e-altura.webp
-  :width: 400
+  :width: 200
   :alt: Projeção Azimutal (referência)
  
 Sendo assim uma propulsão é um conjunto de motores: 
@@ -17,7 +17,7 @@ Pois esse sistema substitui o uso do leme, que geralmente em embarcações comun
 Dessa forma com o azimutal, conseguimos girar o motor para a direção desejada, dessa forma temos uma melhor manobrabilidade além de conseguir movimentrar o nautimodelo de formas que seriam impossíveis com um leme convencional, como por exemplo dar ré no barco.
 
 .. image:: imagens/Ex_motor_azimutal.jpg
-  :width: 400
+  :width: 200
   :alt: Exemplo de Azimutal
 
 ====
@@ -37,10 +37,14 @@ Motor com Encoder
 O BTS####, não é uma banda de K-POP, é um motor dc com um sistema de encoder, sistema esse responsavel pelo sensoreamente do motor em si, para dessa forma realizar controle sob o motor, ou seja, o encoder nos fornecerá informações sobre o motor, para calcularmos a posição de seu eixo ou sua velocidade de rotação e assim criarmos algoritimos para controlá-lo da forma desejada.
 
 .. image:: imagens/motor_dc_com_encoder.jpg
+  :width: 400
+  :alt: Exemplo de Azimutal
 
 Como vemos na imagem acima do proprio dispositivo, temos um cilindro maior que é o sistema eletromagnético do motor, e no cilindro menor temos os dispositivos de sensoriamente, que são nada mais que sensores de efeito hall, também vemos as suas conexões que são 6 pinos. Esses pinos são mostrados abaixo:
 
 .. image:: imagens/conexao_motor_dc.png
+  :width: 400
+  :alt: Exemplo de Azimutal
 
 Sendo da seguinte forma:
 * os pinos 1 (M1) e 6 (M2) são pinos de tensão para o motor
