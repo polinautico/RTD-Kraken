@@ -25,9 +25,10 @@ Projeto para o Kraken
 ----
  
 Neste ano de 2023, para o Kraken decidimos fazer um sistema similar ao Baleia do ano anterior. O sistema será composto de três principais componentes:
-Motores DC com encoders
-Ponte H BTS####
-Arduino nano
+
+* Motores DC com encoders
+* Ponte H BTS####
+* Arduino nano
 
 ====
 Motor com Encoder
