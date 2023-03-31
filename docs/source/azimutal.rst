@@ -110,6 +110,16 @@ Arduino nano
 
 Escreva aqui
 
+.. image:: imagens/arduino_nano_pins.jpeg
+  :align: center
+  :width: 200
+  :alt: Projeção Azimutal (referência)
+
+.. image:: imagens/arduino_nano_pins.jpeg
+  :align: center
+  :width: 200
+  :alt: Projeção Azimutal (referência)
+
 Esquema de Conexões 
 ------
 
