@@ -71,12 +71,25 @@ A ponte H tem esse nome por que é composto por um conjunto de chaves, sendo que
   :alt: Exemplo de Azimutal
   
 Esse circuito serve para o controlar motores de corrente contínua, fazendo-os girar tanto no sentido horário, quanto no sentido anti-horário, além de possibilitar a controle de velocidade de rotação do motor.
-Nesse projeto do Kraken, utilizaremos o modelo BTS7960 , pois ela aguenta uma corrente bem alta de até 43 A, funciona em um intervalo de tensão de 5 V ~ 45 V, além disso tem uma faixa de controle PWM de 25 kHz e por fim proteção de temperatura, tensão e corrente altas.
+Nesse projeto do Kraken, utilizaremos o modelo BTS7960, o driver dessa ponte H é apenas metade da ponte, portanto é utilizado dois drivers como veremos na figura abaixo (os drivers são o encapsulamentos quadrados), escolhemos esse modelo pois, ela aguenta uma corrente bem alta de até 43 A, funciona em um intervalo de tensão de 5 V ~ 45 V, além disso tem uma faixa de controle PWM de 25 kHz e por fim proteção de temperatura, tensão e corrente altas.
 
 .. image:: imagens/Ponte_H_bts.png
   :width: 400
   :alt: Exemplo de Azimutal
+  
+.. _Pinagem:
 
+=====
+Pinagem
+=====
+.. image:: imagens/ponte_h_conexao.png
+  :width: 400
+  :alt: Exemplo de Azimutal
+
+Agora falando sobre pinagem, vemos que ele possui 8 pinos de controle e são utilizados da seguinte forma:
+
+*
+  
 Arduino nano
 ------
 
