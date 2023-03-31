@@ -39,7 +39,7 @@ Motor com Encoder
 .. image:: imagens/motor_dc_com_encoder.jpg
   :align: center
   :width: 400
-  :alt: Exemplo de Azimutal
+  :alt: Motor de Corrente Continua com Encoder
 
 Como vemos na imagem acima do próprio dispositivo, temos duas partes do cilindro, a primeira e mais perto do eixo é um sistema de engrenagens para redução e a segunda e maior é o sistema eletromagnético do motor junto aos dispositivos de sensoriamento, que são nada mais que sensores de efeito hall, também vemos as suas conexões que são 6 pinos. Esses pinos são mostrados abaixo:
 
@@ -54,7 +54,7 @@ Pinagem
 .. image:: imagens/conexao_motor_dc.png
   :align: center
   :width: 400
-  :alt: Exemplo de Azimutal
+  :alt: Pinagem do Motor
 
 Sendo da seguinte forma:
 
@@ -73,7 +73,7 @@ A ponte H tem esse nome por que é composto por um conjunto de chaves, sendo que
 .. image:: imagens/Ponte_H_Circuito.png
   :align: center
   :width: 400
-  :alt: Exemplo de Azimutal
+  :alt: Circuito Simplificado
   
 Esse circuito serve para o controlar motores de corrente contínua, fazendo-os girar tanto no sentido horário, quanto no sentido anti-horário, além de possibilitar a controle de velocidade de rotação do motor.
 Nesse projeto do Kraken, utilizaremos o modelo BTS7960, o driver dessa ponte H é apenas metade da ponte, portanto é utilizado dois drivers como veremos na figura abaixo (os drivers são o encapsulamentos quadrados), escolhemos esse modelo pois, ela aguenta uma corrente bem alta de até 43 A, funciona em um intervalo de tensão de 5 V ~ 45 V, além disso tem uma faixa de controle PWM de 25 kHz e por fim proteção de temperatura, tensão e corrente altas.
@@ -81,7 +81,7 @@ Nesse projeto do Kraken, utilizaremos o modelo BTS7960, o driver dessa ponte H �
 .. image:: imagens/Ponte_H_bts.png
   :align: center
   :width: 400
-  :alt: Exemplo de Azimutal
+  :alt: Ponte H BTS7960
   
 .. _Pinagem:
 
@@ -91,7 +91,7 @@ Pinagem
 .. image:: imagens/ponte_h_conexao.png
   :align: center
   :width: 400
-  :alt: Exemplo de Azimutal
+  :alt: Conexções da Ponte H
 
 Agora falando sobre pinagem, vemos que ele possui 8 pinos de controle e são utilizados da seguinte forma:
 
@@ -113,12 +113,12 @@ Escreva aqui
 .. image:: imagens/arduino_nano_pins.jpeg
   :align: center
   :width: 200
-  :alt: Projeção Azimutal (referência)
+  :alt: Arduino nano
 
 .. image:: imagens/arduino_nano_pins.jpeg
   :align: center
   :width: 200
-  :alt: Projeção Azimutal (referência)
+  :alt:  Pinagem do Arduino
 
 Esquema de Conexões 
 ------
