@@ -110,7 +110,7 @@ Arduino nano
 
 Escreva aqui
 
-.. image:: imagens/arduino_nano_pins.jpeg
+.. image:: imagens/arduino_nano.png
   :align: center
   :width: 200
   :alt: Arduino nano
