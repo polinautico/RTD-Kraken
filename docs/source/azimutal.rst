@@ -5,6 +5,7 @@ O que significa **Azimutal**? e **Porque** usá-lo?
 A palavra **azimutal** tem origem da palavra azimute, que significa, "ângulo medido no plano horizontal entre o meridiano do lugar do observador e o plano vertical que contém o ponto observado.", exemplificando, seria o plano horizontal de um observador como vemos na imagem a baixo:
 
 .. image:: imagens/azimute-e-altura.webp
+  :align: center
   :width: 200
   :alt: Projeção Azimutal (referência)
  
@@ -17,6 +18,7 @@ Pois esse sistema substitui o uso do leme, que geralmente em embarcações comun
 Dessa forma, com o azimutal, conseguimos girar o motor para a direção desejada, dessa forma temos uma melhor manobrabilidade além de conseguir movimentar o modelo de formas que seriam impossíveis com um leme convencional, como, por exemplo, dar ré no barco.
 
 .. image:: imagens/Ex_motor_azimutal.jpg
+  :align: center
   :width: 300
   :alt: Exemplo de Azimutal
 
@@ -35,6 +37,7 @@ Motor com Encoder
 É simplesmente como o nome sugere, um motor dc com um sistema de encoder, sistema esse responsável pelo sensoreamento do motor em si, para dessa forma realizar controle sob o motor, ou seja, o encoder nos fornecerá informações sobre o motor, para calcularmos a **posição** de seu eixo ou sua **velocidade** de rotação e assim criarmos algorítimos para controlá-lo da forma desejada.
 
 .. image:: imagens/motor_dc_com_encoder.jpg
+  :align: center
   :width: 400
   :alt: Exemplo de Azimutal
 
@@ -49,6 +52,7 @@ Como vemos na imagem acima do próprio dispositivo, temos duas partes do cilindr
 Pinagem
 =====
 .. image:: imagens/conexao_motor_dc.png
+  :align: center
   :width: 400
   :alt: Exemplo de Azimutal
 
@@ -67,6 +71,7 @@ Ponte H é um circuito eletrônico de potência, ele é um chopper de classe E, 
 A ponte H tem esse nome por que é composto por um conjunto de chaves, sendo que o motor (load) fica no meio entre elas, veja a imagem abaixo:
 
 .. image:: imagens/Ponte_H_Circuito.png
+  :align: center
   :width: 400
   :alt: Exemplo de Azimutal
   
@@ -74,6 +79,7 @@ Esse circuito serve para o controlar motores de corrente contínua, fazendo-os g
 Nesse projeto do Kraken, utilizaremos o modelo BTS7960, o driver dessa ponte H é apenas metade da ponte, portanto é utilizado dois drivers como veremos na figura abaixo (os drivers são o encapsulamentos quadrados), escolhemos esse modelo pois, ela aguenta uma corrente bem alta de até 43 A, funciona em um intervalo de tensão de 5 V ~ 45 V, além disso tem uma faixa de controle PWM de 25 kHz e por fim proteção de temperatura, tensão e corrente altas.
 
 .. image:: imagens/Ponte_H_bts.png
+  :align: center
   :width: 400
   :alt: Exemplo de Azimutal
   
@@ -83,6 +89,7 @@ Nesse projeto do Kraken, utilizaremos o modelo BTS7960, o driver dessa ponte H �
 Pinagem
 =====
 .. image:: imagens/ponte_h_conexao.png
+  :align: center
   :width: 400
   :alt: Exemplo de Azimutal
 
