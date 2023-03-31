@@ -112,12 +112,12 @@ Escreva aqui
 
 .. image:: imagens/arduino_nano.png
   :align: center
-  :width: 200
+  :width: 300
   :alt: Arduino nano
 
 .. image:: imagens/arduino_nano_pins.jpeg
   :align: center
-  :width: 200
+  :width: 400
   :alt:  Pinagem do Arduino
 
 Esquema de Conexões 
