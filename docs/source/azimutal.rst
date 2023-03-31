@@ -88,7 +88,12 @@ Pinagem
 
 Agora falando sobre pinagem, vemos que ele possui 8 pinos de controle e são utilizados da seguinte forma:
 
-*
+*Pinos 8(GND) e 7(VCC): conectados no microcontrolador sendo GND e 5V, respectivamente (INPUT VOLTAGE)
+*Pinos 6(L_IS) e 5(R_IS): são pinos de monitoramento de corrente em cada sentido de rotação (OUTPUT) 
+*Pinos 4(L_EN) e 3(R_EN): controlam o sinal de enable em cada sentido de rotação (HIGH/LOW INPUT)
+*Pinos 2(LPWM) e 1(RPWM): controlam a velocidade do motor em cada sentido de rotação (ANALOG/PWM INPUT)
+
+.. note:: NUNCA LIGUE OS PINOS 4 e 3 , 2 E 1 NO HIGH AO MESMO TEMPO. quando queremos liga o motor no sentido horário mandamos um sinal de tensão para RPWM e um sinal de GND (0v) para o LPWM, e para o sentido oposto basta fazer a logia oposta. Os pinos 4 e 3 são apenas enables, ou seja, apenas iram habilitar a saida LPWM e RPWM, como se fosse um interruptor. 
   
 Arduino nano
 ------
