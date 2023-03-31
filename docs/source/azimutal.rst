@@ -63,7 +63,15 @@ Sendo da seguinte forma:
 Ponte H BTS7960
 ------
 
-Escreva aqui
+Ponte H é um circuito eletrônico de potência, ele é um chopper de classe E, mas deixando de lado essa parte teórica, vamos explicá-la de forma prática.
+A ponte H tem esse nome por que é composto por um conjunto de chaves, sendo que o motor (load) fica no meio entre elas, veja a imagem abaixo:
+
+.. image:: imagens/Ponte_H_Circuito.png
+  :width: 400
+  :alt: Exemplo de Azimutal
+  
+Esse circuito serve para o controlar motores de corrente contínua, fazendo-os girar tanto no sentido horário, quanto no sentido anti-horário, além de possibilitar a controle de velocidade de rotação do motor.
+Nesse projeto do Kraken, utilizaremos o modelo BTS7960 , pois ela aguenta uma corrente bem alta de até 43 A, funciona em um intervalo de tensão de 5 V ~ 45 V, além disso tem uma faixa de controle PWM de 25 kHz e por fim proteção de temperatura, tensão e corrente altas.
 
 .. image:: imagens/Ponte_H_bts.png
   :width: 400
