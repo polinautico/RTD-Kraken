@@ -46,6 +46,8 @@ Como vemos na imagem acima do próprio dispositivo, temos duas partes do cilindr
 
 .. note:: Um sistema de engrenagem de redução servem para diminuir a velocidade de rotação do eixo, por exemplo, enquanto o eixo do motor gira em 750 RPM, e temos um sistema de engrenagens 1:75, o eixo final da caixa de redução irá girar em 1 RPM.
 
+.. note:: Só é necessário 1 pino de interrupção para ler os pinos do encoder, caso duvida ver: https://controlautomaticoeducacion.com/arduino/motor-dc-encoder/
+
 .. _Pinagem:
 
 =====
