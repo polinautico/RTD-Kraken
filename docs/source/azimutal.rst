@@ -121,6 +121,11 @@ Escreva aqui
   :align: center
   :width: 500
   :alt:  Pinagem do Arduino
+  
+.. image:: imagens/conexao.jpeg
+  :align: center
+  :width: 500
+  :alt:  Pinagem do Arduino
 
 Esquema de Conexões 
 ------
