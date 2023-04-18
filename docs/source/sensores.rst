@@ -76,3 +76,4 @@ Bom, a resposta é simples: utilizamos uma ferramenta Open-Source (isso é, Cód
 
 .. image:: imagens/noderedex.png
   :align: center
+  :width: 500
