@@ -46,7 +46,7 @@ A sonda que faz partedo MAX6675 é revestida de aço inoxidável, com uma blinda
  
 .. image:: imagens/senstemp1.jpg
   :align: right
-  :width: 300
+  :width: 500
 
 .. note:: O sensor tem uma biblioteca própria, que é a "max6675.h"
 
