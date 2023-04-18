@@ -52,11 +52,11 @@ A sonda que faz partedo MAX6675 é revestida de aço inoxidável, com uma blinda
 
 Na questão dos pinos, ele possui os seguintes para se comunicar com o microcontrolador e alimentação:
 
-*GND: Terra;
-*VCC: 3V a 5,5V;
-*SCK: Serial Clock input, canal utilizado para sincronizar a transmissão dos dados;
-*CS: Chip Select;
-*SO: Serial Data output.
+* GND: Terra;
+* VCC: 3V a 5,5V;
+* SCK: Serial Clock input, canal utilizado para sincronizar a transmissão dos dados;
+* CS: Chip Select;
+* SO: Serial Data output.
 
 Heltec ESP 32 LoRa (V2)
 -----
