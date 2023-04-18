@@ -10,7 +10,6 @@ Como exemplos de aplicação, essa tecnologia está presente na agricultura, em 
 
 .. image:: imagens/telemex.png
   :align: center
-  :width: 500
   
 No caso do nosso rebocador, utilizaremos a telemetria para monitorar o que está havendo com a parte elétrica, afim de entender o desempenho da embarcação.
 
@@ -76,4 +75,3 @@ Bom, a resposta é simples: utilizamos uma ferramenta Open-Source (isso é, Cód
 
 .. image:: imagens/noderedex.png
   :align: center
-  :width: 500
