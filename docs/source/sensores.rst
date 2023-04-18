@@ -60,3 +60,4 @@ Na questão dos pinos, ele possui os seguintes para se comunicar com o microcont
 
 Heltec ESP 32 LoRa (V2)
 -----
+Pedro Pedro Pedro Pedro Pedro Pedro Pedro Pedro
