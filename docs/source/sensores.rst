@@ -30,3 +30,8 @@ Na entrada do módulo, pode ser conectado um valor de tensão DC até cinco veze
 Nele, há dois pinos para o VCC e GND, e um pino (S) para a porta analógica do microcontrolador fazer a leitura.
 
 .. note::  A resolução do ADC (conversor analógico digital) do arduino é de 10 bits, portanto, a resolução do sensor de tensão será de 0,00489V (5V / 1023). Logo, a tensão mínima na entrada para que o sensor possa realizar a leitura é de 0,02445V.
+
+Sensor de Temperatura MAX6675 Termopar
+-----
+O Termopar é um sensor que mede a temperatura através de dois metais distintos que são unidos e ligados a um dispositivo que tenha capacidade de ler termopares. Se há uma diferença de temperatura entre a extremidade unida e as extremidades livres, uma diferença de potencial surge e se o termopar estiver conectado ao dispositivo que tenha capacidade de interpretar o sinal, um valor de temperatura correspondente será apresentado.
+Ele tem a capacidade de ler de 0°C a 300°C
