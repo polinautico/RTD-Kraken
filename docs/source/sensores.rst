@@ -62,5 +62,8 @@ Heltec ESP 32 LoRa (V2)
 -----
 Pedro Pedro Pedro Pedro Pedro Pedro Pedro Pedro
 
+Esquema de Conexões
+-----
+
 Dashboard - Node-Red
 -----
