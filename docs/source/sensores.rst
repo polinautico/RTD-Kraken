@@ -10,7 +10,6 @@ Como exemplos de aplicação, essa tecnologia está presente na agricultura, em 
 
 .. image:: imagens/telemex.png
   :align: center
-  :width: 300
   
 No caso do nosso rebocador, utilizaremos a telemetria para monitorar o que está havendo com a parte elétrica, afim de entender o desempenho da embarcação.
 
@@ -65,5 +64,15 @@ Pedro Pedro Pedro Pedro Pedro Pedro Pedro Pedro
 Esquema de Conexões
 -----
 
-Dashboard - Node-Red
+Dashboard e Node-Red
 -----
+Primeiramente, precisamos detalhar como faremos para visualizar os dados da telemetria do Kraken. Nesse caso, utilizaremos uma estratégia chamada "Dashboard"
+
+Uma dashboard é nada mais e nada menos que um painel visual que apresenta, de forma compacta e centralizada, diversas informações as quais o usuário necessite. É uma entratégia de controle utilizada para facilitar a tomada de decisões. Junto com a telemetria, a dashboard permite que tenhamos, de fato, o controle sobre as informações necessárias para o entendimento da nossa embarcação.
+
+Ok, agora fica a pergunta: como que construímos essa dashboard?
+Bom, a resposta é simples: utilizamos uma ferramenta Open-Source (isso é, Código Aberto, onde todos podem contrubuir para o desenvolvimento da mesma). E para a telemetria do Kraken, escolhemos o Node-Red.
+
+.. image:: imagens/noderedex.png
+  :align: center
+  :width: 300
