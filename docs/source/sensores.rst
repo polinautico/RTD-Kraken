@@ -75,6 +75,7 @@ Ok, agora fica a pergunta: como que construímos essa dashboard?
 Bom, a resposta é simples: utilizamos uma ferramenta Open-Source (isso é, Código Aberto, onde todos podem contrubuir para o desenvolvimento da mesma). E para a telemetria do Kraken, escolhemos o Node-Red.
 
 Exemplo da interface do Node-Red:
+
 .. image:: imagens/noderedex.png
   :align: center
 
