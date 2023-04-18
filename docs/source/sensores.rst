@@ -20,7 +20,7 @@ A Telemetria do Kraken e dispositivos
 Para o Kraken, utilizaremos a telemetria para monitorar a tensão e a temperatura dos componentes elétricos utilizando:
 
 * Sensor de Tensão DC 0 a 25V
-* Sensor de Temperatura MAX6675 Termopar Tipo KMAX6675 Termopar Tipo K
+* Sensor de Temperatura MAX6675 Termopar Tipo K
 * ESP LoRa 32 V2
 
 Sensor de Tensão DC 0 a 25V
