@@ -40,6 +40,30 @@ Sensor de Temperatura MAX6675 Termopar
 O Termopar é um sensor que mede a temperatura que tem a capacidade de ler de 0°C a 300°C, através de dois metais distintos que são unidos e ligados a um dispositivo que tenha capacidade de ler a temperatura. Se há uma diferença de temperatura entre a extremidade unida e as extremidades livres, uma diferença de potencial surge e se o Termopar estiver conectado ao dispositivo que tenha capacidade de interpretar o sinal (no nosso caso, o ESP32), um valor de temperatura correspondente será apresentado.
 A sonda que faz partedo MAX6675 é revestida de aço inoxidável, com uma blindagem na ponta, o que permite que o dispositivo capte temperaturas altas.
 
+.. image:: imagens/senstemp2.png
+  :align: left
+  :width: 300
+ 
+.. image:: imagens/senstemp1.jpg
+  :align: right
+  :width: 300
+
 .. note:: O sensor tem uma biblioteca própria, que é a "max6675.h"
 
-.. note:: pumba la pumba
+Na questão dos pinos, ele possui os seguintes para se comunicar com o microcontrolador e alimentação:
+
+* GND: Terra;
+* VCC: 3V a 5,5V;
+* SCK: Serial Clock input, canal utilizado para sincronizar a transmissão dos dados;
+* CS: Chip Select;
+* SO: Serial Data output.
+
+Heltec ESP 32 LoRa (V2)
+-----
+Pedro Pedro Pedro Pedro Pedro Pedro Pedro Pedro
+
+Esquema de Conexões
+-----
+
+Dashboard - Node-Red
+-----
