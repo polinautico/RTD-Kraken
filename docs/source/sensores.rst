@@ -40,11 +40,11 @@ O Termopar é um sensor que mede a temperatura que tem a capacidade de ler de 0�
 A sonda que faz partedo MAX6675 é revestida de aço inoxidável, com uma blindagem na ponta, o que permite que o dispositivo capte temperaturas altas.
 
 .. image:: imagens/senstemp2.png
-  :align: left
+  :align: center
   :width: 300
  
 .. image:: imagens/senstemp1.jpg
-  :align: right
+  :align: center
   :width: 500
 
 .. note:: O sensor tem uma biblioteca própria, que é a "max6675.h"
