@@ -63,6 +63,7 @@ Pedro Pedro Pedro Pedro Pedro Pedro Pedro Pedro
 
 Esquema de Conexões
 -----
+9? 99? 999? 9999? G? 3? X? X? X?
 
 Dashboard e Node-Red
 -----
