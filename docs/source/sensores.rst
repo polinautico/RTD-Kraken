@@ -81,6 +81,6 @@ Exemplo da interface do Node-Red:
 
 O Node-Red é uma ferramenta que permite criar "nós" para realizar certas ações, como eventos http, tcp, comunicações serial, twitter, mqtt, etc. Praticamente, ele serve para fazer uma conexão entre sua interface visual e algum dispositivo IoT.
 
-Sua "programação" se baseia em fluxo de dados num editor web gráfico, que auxilia a conexão com esses dispositivos através de protocolos ou funções
+Sua "programação" se baseia em fluxo de dados num editor web gráfico, que auxilia a conexão com esses dispositivos através de protocolos ou funções.
 
 .. note:: É possível achar N tutoriais de como baixar o Node-Red, já que ele funciona como um "servidor" ou uma página web hospedada na sua máquina, seja ela um compputador, um celular ou um Raspberry. Nessa documentação, não trataremos sobre como baixar a ferramenta nesses dispositivos.
