@@ -55,15 +55,17 @@ Na questão dos pinos, ele possui os seguintes para se comunicar com o microcont
 * VCC: 3V a 5,5V;
 * SCK: Serial Clock input, canal utilizado para sincronizar a transmissão dos dados;
 * CS: Chip Select;
-* SO: Serial Data output. Também conhecido como MISO (Multiple Input Single Output).
+* SO: Serial Data output. Também conhecido como MISO (Multiple Input Single Output);
 
 Heltec ESP 32 LoRa (V2)
 -----
 Pedro Pedro Pedro Pedro Pedro Pedro Pedro Pedro
+André André André André
 
 Esquema de Conexões
 -----
 9? 99? 999? 9999? G? 3? X? X? X?
+Nautico é foda, Eletricomp reina
 
 Dashboard e Node-Red
 -----
