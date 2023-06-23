@@ -59,8 +59,19 @@ Na questão dos pinos, ele possui os seguintes para se comunicar com o microcont
 
 Heltec ESP 32 LoRa (V2)
 -----
-Pedro Pedro Pedro Pedro Pedro Pedro Pedro Pedro
-André André André André
+A Heltec ESP 32 LoRa é uma placa semelhante ao Arduino, com seu principal diferencial sendo a conexão LoRa.
+
+LoRa é uma tecnologia de radiotransferência e comunicação de longo alcance e baixo consumo. Semelhante a uma conexão bluetooth, ela permite que sejam criados projetos de monitoramento à longo alcance. Ela utiliza bandas de radiofrequência, o que permite que seja feita a transmissão de dados e pacotes de 3 à 15 km de distância.
+
+A placa da Heltec possui um módulo LoRa e uma antena, o que facilita a nossa utilização da tecnologia. Além disso, ela possui conexão WiFi e Bluetooth, além de um display OLED que permite mostrar informações nele.
+
+.. note:: Existem tutoriais para instalação da placa Heltec ESP 32 LoRa pela Internet, mas no projeto utilizamos a https://github.com/Heltec-Aaron-Lee/WiFi_Kit_series/releases/download/0.0.7/package_heltec_esp32_index.json
+
+No projeto, utilizamos uma placa dentro da embarcação como o microcontrolador central, que comandará os azimutais (mais detalhes na guia "Propulsor Azimutal") e coletará os dados da telemetria para transmitir. Também é necessária uma placa em terra para se conectar ao computador e receber as informações.
+
+.. image:: imagens/esp32pinout.png
+  :align: center
+  :width: 500
 
 Esquema de Conexões
 -----
