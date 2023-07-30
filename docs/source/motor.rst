@@ -31,5 +31,6 @@ Existem dois tipos de ESC, que seguem a mesma lógica dos motores:
 *Brushless: Age com um microcontrolador para controlar o chaveamento das bobinas, através do PWM
 
 No nosso caso, utilizamos um ESC Brushed 1060.
+
 .. image:: imagens/esc1060.jpg
   :align: center
