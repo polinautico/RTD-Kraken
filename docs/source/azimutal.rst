@@ -27,9 +27,10 @@ Projeto para o Kraken
  
 Neste ano de 2023, para o Kraken decidimos fazer um sistema similar ao Baleia do ano anterior. O sistema azimutal será composto de três principais componentes:
 
-* Motores DC com encoders
+* Motores DC com encoder
 * Ponte H BTS7960
 * Arduino nano
+* Controle PID
 
 Motor com Encoder
 ------
@@ -41,12 +42,11 @@ Motor com Encoder
   :width: 400
   :alt: Motor de Corrente Continua com Encoder
 
-Como vemos na imagem acima do próprio dispositivo, temos duas partes do cilindro, a primeira e mais perto do eixo é um sistema de engrenagens para redução e a segunda e maior é o sistema eletromagnético do motor junto aos dispositivos de sensoriamento, que são nada mais que sensores de efeito hall, também vemos as suas conexões que são 6 pinos. Esses pinos são mostrados abaixo:
+Como vemos na imagem acima do próprio dispositivo, temos duas partes do cilindro, a primeira e mais perto do eixo é um sistema de engrenagens para redução e a segunda e maior é o sistema eletromagnético do motor junto aos dispositivos de sensoriamento, que são nada mais que sensores de **efeito hall**, também vemos as suas conexões que são 6 pinos. Esses pinos são mostrados abaixo:
 
 
 .. note:: Um sistema de engrenagem de redução servem para diminuir a velocidade de rotação do eixo, por exemplo, enquanto o eixo do motor gira em 750 RPM, e temos um sistema de engrenagens 1:75, o eixo final da caixa de redução irá girar em 1 RPM.
 
-.. note:: Só é necessário 1 pino de interrupção para ler os pinos do encoder, caso duvida ver: https://controlautomaticoeducacion.com/arduino/motor-dc-encoder/
 
 .. _Pinagem:
 
@@ -66,6 +66,46 @@ Sendo da seguinte forma:
 
 * por fim e não menos importante os pinos 4 (C1) e 5 (C2) são pinos de dados do encoder/sensor 
 
+.. _Dimensionamento:
+
+=====
+Dimensionamento
+=====
+
+Para dimensionar um motor dc com encoder em nosso projeto devemos olhar 2 variáveis:
+* Tensão
+* RPM
+
+A tensão deve do motor deve se adequar a tensão do projeto, como neste projeto utilizamos uma bateria de 12V e estamos alimentando a Ponte H com 12v, o ideal será utilizar um motor dc com a mesma tensão.
+O RPM, Rotações Por Minuto, está atrelada a redução do motor, portanto se refere ao torque que podemos gerar com ele.
+Quando escolhemos o RPM devemos nos atentar sempre ao torque, quanto menor for os RPM maior será o torque e a precisão do encoder, portanto conseguimos escolher uma posição e o motor seguirá com perfeição, porém perdemos velocidade e o torque de stall(parada) fica muito alto. 
+* O torque de stall é a força que o motor é capaz de fazer para frear o eixo, e conforme a redução aumenta(RPM diminui) esse torque cresce exponencialmente, sendo que a partir de um determinado ponto, frear o motor, chega a ser proibido, pois as engrenagens não aguentarão a força e se romperão.
+
+.. note:: Geralmente é melhor e mais barato comprar pelo Aliexpress, temos uma maior variedade e preços mais baixos, portanto é melhor se planejar para comprar o DC com encoder cedo!
+
+Abaixo um exemplo de tabela de especificações:
+
+.. image:: imagens/Ponte_H_Circuito.png
+  :align: center
+  :width: 400
+  :alt: Circuito Simplificado
+
+.. _Controle:
+
+=====
+Controle
+=====
+
+Para se controlar a velocidade e o sentido do motor, é necessário utilizar uma **Ponte H** e um Arduino:
+*Ponte H : Ela se comunica com o arduino e com o Motor DC, sendo responsável por mandar a tensão correta ao motor. (mais detalhes no próximo item).
+*Arduino : Ele é responsável por ler os pinos do encoder (sensor hall), vistos em **Pinagem**, dessa forma detectando o sentido de rotação do motor e a sua velocidade, para assim controlar o motor.
+
+.. note:: O motor dc com encoder não identifica posição absoluta, ele apenas identifica posição relativa! Ou seja ele não consegue definir sua posição inicial (como por exemplo uma posição inicial para a embarcação ir avante, quando o barco ligar), mas ele sabe girar tantos graus para um lado e retornar de onde ele começou. Resolvemos esse problema com outro sensor que será apresentado posteriormente.
+
+
+
+
+.. note:: É necessário 1 pino de interrupção para ler os pinos do encoder, caso duvida ver: https://controlautomaticoeducacion.com/arduino/motor-dc-encoder/
 Ponte H BTS7960
 ------
 
