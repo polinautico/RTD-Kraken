@@ -62,11 +62,11 @@ Pinagem
 
 Sendo da seguinte forma:
 
-* os pinos 1 (M1) e 6 (M2) são pinos de tensão para o motor
+* Os pinos 1 (M1) e 6 (M2) são pinos de tensão para o motor, conectados na ponte h
 
-* os pinos 2 (GND encoder) e 5 (3.3v encoder) são pinos de tensão para o encoder
+* Os pinos 2 (GND encoder) e 5 (3.3v encoder) são pinos de tensão para o encoder, conectados no arduino
 
-* por fim e não menos importante os pinos 4 (C1) e 5 (C2) são pinos de dados do encoder/sensor 
+* Por fim e não menos importante os pinos 4 (C1) e 5 (C2) são pinos de dados do encoder/sensor, conectados no arduino
 
 .. _Dimensionamento:
 
@@ -103,9 +103,9 @@ Controle
 
 Para se controlar a velocidade e o sentido do motor, é necessário utilizar uma **Ponte H** e um Arduino:
 
-*Ponte H : Ela se comunica com o arduino e com o Motor DC, sendo responsável por mandar a tensão correta ao motor. (mais detalhes no próximo item).
+* Ponte H : Ela se comunica com o arduino e com o Motor DC, sendo responsável por mandar a tensão correta ao motor. (mais detalhes no próximo item).
 
-*Arduino : Ele é responsável por ler os pinos do encoder (sensor hall), vistos em **Pinagem**, dessa forma detectando o sentido de rotação do motor e a sua velocidade, para assim controlar o motor.
+* Arduino : Ele é responsável por ler os pinos do encoder (sensor hall), vistos em **Pinagem**, dessa forma detectando o sentido de rotação do motor e a sua velocidade, para assim controlar o motor.
 
 Os pinos do encoder, C1 e C2, enviam sinais binarios de 1 e 0 ao arduino, utilizamos um pino de interrupção do arduino para interromper qualquer processo que o arduino esteja executando, assim que o sinal recebido em C1 *sobe para 1*, caso o sinal em C2 esteja em *0* temos o sentido horário, caso esteja em *1* temos o sentido anti-horário. Veja abaixo como os sensores hall atuam em sentido horário e anti-horario:
 
@@ -122,15 +122,16 @@ Ponte H BTS7960
 ------
 
 Ponte H é um circuito eletrônico de potência, ele é um chopper de classe E, mas deixando de lado essa parte teórica, vamos explicá-la de forma prática.
-A ponte H tem esse nome por que é composto por um conjunto de chaves, sendo que o motor (load) fica no meio entre elas, veja a imagem abaixo:
+A ponte H tem esse nome por que é composto por um conjunto de chaves eletrônicas, sendo que o motor (load) fica no meio entre elas, veja a imagem abaixo:
 
 .. image:: imagens/Ponte_H_Circuito.png
   :align: center
   :width: 400
   :alt: Circuito Simplificado
   
-Esse circuito serve para o controlar motores de corrente contínua, fazendo-os girar tanto no sentido horário, quanto no sentido anti-horário, além de possibilitar a controle de velocidade de rotação do motor.
-Nesse projeto do Kraken, utilizaremos o modelo BTS7960, o driver dessa ponte H é apenas metade da ponte, portanto é utilizado dois drivers como veremos na figura abaixo (os drivers são o encapsulamentos quadrados), escolhemos esse modelo pois, ela aguenta uma corrente bem alta de até 43 A, funciona em um intervalo de tensão de 5 V ~ 45 V, além disso tem uma faixa de controle PWM de 25 kHz e por fim proteção de temperatura, tensão e corrente altas.
+Esse circuito serve para o controlar motores de corrente contínua, fazendo-os girar tanto no sentido horário, quanto no sentido anti-horário, apenas variando o sentido da corrente elétrica. Além de possibilitar a controle de velocidade de rotação do motor, variando a tensão de saída.
+
+Nesse projeto do Kraken, utilizaremos o modelo BTS7960, o driver (BTS7960B) dessa ponte H é apenas metade da ponte, portanto é utilizado dois drivers como veremos na figura abaixo (os drivers são o encapsulamentos quadrados), escolhemos esse modelo pois, ela aguenta uma corrente bem alta de até 43 A, funciona em um intervalo de tensão de 5 V ~ 45 V, além disso tem uma faixa de controle PWM de 25 kHz e por fim proteção de temperatura, tensão e corrente.
 
 .. image:: imagens/Ponte_H_bts.png
   :align: center
@@ -147,17 +148,19 @@ Pinagem
   :width: 400
   :alt: Conexções da Ponte H
 
+.. note:: O DATASHEET DESSA PONTE HESTÁ ERRADA! **UTILIZE AS INSTRUÇÕES ABAIXO!!!!!**.   
+
 Agora falando sobre pinagem, vemos que ele possui 8 pinos de controle e são utilizados da seguinte forma:
 
 * Pinos 8(GND) e 7(VCC): conectados no microcontrolador sendo GND e 5V, respectivamente (INPUT VOLTAGE)
 
 * Pinos 6(L_IS) e 5(R_IS): são pinos de monitoramento de corrente em cada sentido de rotação (OUTPUT) 
 
-* Pinos 4(L_EN) e 3(R_EN): controlam o sinal de enable em cada sentido de rotação (HIGH/LOW INPUT)
+* Pinos 4(L_EN) e 3(R_EN): controlam a velocidade do motor em cada sentido de rotação (ANALOG/PWM INPUT)
 
-* Pinos 2(LPWM) e 1(RPWM): controlam a velocidade do motor em cada sentido de rotação (ANALOG/PWM INPUT)
+* Pinos 2(LPWM) e 1(RPWM): controlam o sinal de enable em cada sentido de rotação (HIGH/LOW INPUT)
 
-.. note:: NUNCA LIGUE OS PINOS 4 e 3 , 2 E 1 NO HIGH AO MESMO TEMPO. quando queremos liga o motor no sentido horário mandamos um sinal de tensão para RPWM e um sinal de GND (0v) para o LPWM, e para o sentido oposto basta fazer a logia oposta. Os pinos 4 e 3 são apenas enables, ou seja, apenas iram habilitar a saida LPWM e RPWM, como se fosse um interruptor. 
+.. note:: **!!NUNCA LIGUE OS PINOS 4, 3 , 2 e 1 NO HIGH AO MESMO TEMPO**. quando queremos liga o motor no sentido horário mandamos um sinal de VCC (HIGH) para RPWM e um sinal de GND (0v) para o LPWM, e para o sentido oposto basta fazer a logia oposta. Os pinos 4 e 3 são **OS SINAIS PWM!**. 
   
 Arduino nano
 ------
@@ -183,3 +186,10 @@ Esquema de Conexões
 ------
 
 Escreva aqui
+  
+Controle PID
+------
+
+Esse controle faz parte da teoria de engenharia de controle, é um controle que une as ações proporcional, integrativo e derivativo. Caso não tenha interesse -> apenas use o código que irá funcionar :D
+
+
