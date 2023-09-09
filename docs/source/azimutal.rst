@@ -10,8 +10,10 @@ A palavra **azimutal** tem origem da palavra azimute, que significa, "ângulo me
   :alt: Projeção Azimutal (referência)
  
 Sendo assim, uma propulsão é um conjunto de motores: 
-O primeiro e o principal é o de propulsão do barco, que será responsável por fornecer aceleração e é geralmente especificado no edital do Duna.
-O segundo é responsável pela rotação do motor principal no eixo azimute.
+
+* O primeiro e o principal é o de propulsão do barco, que será responsável por fornecer aceleração e é geralmente especificado no edital do Duna.
+
+* O segundo é responsável pela rotação do motor principal no eixo azimute.
 
 E por que foi escolhido esse sistema de controle?
 Pois esse sistema substitui o uso do leme, que geralmente em embarcações comuns serve para direcionar o fluxo de água, para assim mover o barco para a direção desejada.
@@ -73,19 +75,22 @@ Dimensionamento
 =====
 
 Para dimensionar um motor dc com encoder em nosso projeto devemos olhar 2 variáveis:
+
 * Tensão
 * RPM
 
 A tensão deve do motor deve se adequar a tensão do projeto, como neste projeto utilizamos uma bateria de 12V e estamos alimentando a Ponte H com 12v, o ideal será utilizar um motor dc com a mesma tensão.
+
 O RPM, Rotações Por Minuto, está atrelada a redução do motor, portanto se refere ao torque que podemos gerar com ele.
 Quando escolhemos o RPM devemos nos atentar sempre ao torque, quanto menor for os RPM maior será o torque e a precisão do encoder, portanto conseguimos escolher uma posição e o motor seguirá com perfeição, porém perdemos velocidade e o torque de stall(parada) fica muito alto. 
-* O torque de stall é a força que o motor é capaz de fazer para frear o eixo, e conforme a redução aumenta(RPM diminui) esse torque cresce exponencialmente, sendo que a partir de um determinado ponto, frear o motor, chega a ser proibido, pois as engrenagens não aguentarão a força e se romperão.
+
+O torque de stall é a força que o motor é capaz de fazer para frear o eixo, e conforme a redução aumenta(RPM diminui) esse torque cresce exponencialmente, sendo que a partir de um determinado ponto, frear o motor, chega a ser proibido, pois as engrenagens não aguentarão a força e se romperão.
 
 .. note:: Geralmente é melhor e mais barato comprar pelo Aliexpress, temos uma maior variedade e preços mais baixos, portanto é melhor se planejar para comprar o DC com encoder cedo!
 
 Abaixo um exemplo de tabela de especificações:
 
-.. image:: imagens/Ponte_H_Circuito.png
+.. image:: imagens/DC_Encoder_tabela.png
   :align: center
   :width: 400
   :alt: Circuito Simplificado
@@ -97,15 +102,22 @@ Controle
 =====
 
 Para se controlar a velocidade e o sentido do motor, é necessário utilizar uma **Ponte H** e um Arduino:
+
 *Ponte H : Ela se comunica com o arduino e com o Motor DC, sendo responsável por mandar a tensão correta ao motor. (mais detalhes no próximo item).
+
 *Arduino : Ele é responsável por ler os pinos do encoder (sensor hall), vistos em **Pinagem**, dessa forma detectando o sentido de rotação do motor e a sua velocidade, para assim controlar o motor.
+
+Os pinos do encoder, C1 e C2, enviam sinais binarios de 1 e 0 ao arduino, utilizamos um pino de interrupção do arduino para interromper qualquer processo que o arduino esteja executando, assim que o sinal recebido em C1 *sobe para 1*, caso o sinal em C2 esteja em *0* temos o sentido horário, caso esteja em *1* temos o sentido anti-horário. Veja abaixo como os sensores hall atuam em sentido horário e anti-horario:
+
+.. image:: imagens/DC_Encoder_hall.png
+  :align: center
+  :width: 400
+  :alt: Circuito Simplificado
 
 .. note:: O motor dc com encoder não identifica posição absoluta, ele apenas identifica posição relativa! Ou seja ele não consegue definir sua posição inicial (como por exemplo uma posição inicial para a embarcação ir avante, quando o barco ligar), mas ele sabe girar tantos graus para um lado e retornar de onde ele começou. Resolvemos esse problema com outro sensor que será apresentado posteriormente.
 
+.. note:: Caso duvida ver: https://controlautomaticoeducacion.com/arduino/motor-dc-encoder/
 
-
-
-.. note:: É necessário 1 pino de interrupção para ler os pinos do encoder, caso duvida ver: https://controlautomaticoeducacion.com/arduino/motor-dc-encoder/
 Ponte H BTS7960
 ------
 
