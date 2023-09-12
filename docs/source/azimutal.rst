@@ -167,19 +167,40 @@ Arduino nano
 
 Esse microcontrolador é o responsável por unir todos esses componentes e fazer todos os cálculo e lógicas necessárias para controlar a posição do motor dc com encoder, ou melhor, controlar a posição de cada azimutal.
 
+Seu principal papel é receber um ângulo de um outro microcontrolador mestre, e movimentar o Motor DC com Encoder para a posição desejada, parece simples neh? Porém tem muita programação por trás disso.
+
 Será considerado que neste ponto, você leitor, já possui uma noção de programação em C++ para entender os códigos que virão a seguir.
 
 Primeiramente listamos abaixo todas as bibliotecas utilizadas no Nano:
 
 ```console
+# Nessa parte incluimos as bibliotecas
 #include <Wire.h>
 #include <Arduino.h>
 #include <PIDController.h>
+# a
 ```
+
+```console
+# Install required Python dependencies (MkDocs etc.)
+pip install -r docs/requirements.txt
+
+# Run the mkdocs development server
+mkdocs serve
+```
+
+
+
 
 Utilizamos a Wire.h para utilizar conexão I2C, Arduino.h é a biblioteca padrão do arduino, mas como utilizamos o PlataformIO para programar temos que adicioná-la a parte, PIDController.h é um biblioteca própria criada por nós mesmos, onde está programada o controlador PID que mais a frente.
 
+A parte de comunicação I2C deixaremos para discutir no tópico do Heltec Esp32 Wifi LoRa V2.
 
+Primeiramente iremos mostrar como foi programado o encoder do Motor DC:
+
+```console
+
+```
 
 
 
