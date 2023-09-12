@@ -174,20 +174,18 @@ Será considerado que neste ponto, você leitor, já possui uma noção de progr
 Primeiramente listamos abaixo todas as bibliotecas utilizadas no Nano:
 
 ```console
-# Nessa parte incluimos as bibliotecas
+foo@bar:~$ whoami
 #include <Wire.h>
 #include <Arduino.h>
 #include <PIDController.h>
-# a
 ```
 
-```console
 # Install required Python dependencies (MkDocs etc.)
 pip install -r docs/requirements.txt
 
 # Run the mkdocs development server
 mkdocs serve
-```
+
 
 
 
@@ -198,9 +196,6 @@ A parte de comunicação I2C deixaremos para discutir no tópico do Heltec Esp32
 
 Primeiramente iremos mostrar como foi programado o encoder do Motor DC:
 
-```console
-
-```
 
 
 
