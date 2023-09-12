@@ -92,7 +92,7 @@ Abaixo um exemplo de tabela de especificações:
 
 .. image:: imagens/DC_Encoder_tabela.png
   :align: center
-  :width: 400
+  :width: 600
   :alt: Circuito Simplificado
 
 .. _Controle:
@@ -111,7 +111,7 @@ Os pinos do encoder, C1 e C2, enviam sinais binarios de 1 e 0 ao arduino, utiliz
 
 .. image:: imagens/DC_Encoder_hall.png
   :align: center
-  :width: 400
+  :width: 600
   :alt: Circuito Simplificado
 
 .. note:: O motor dc com encoder não identifica posição absoluta, ele apenas identifica posição relativa! Ou seja ele não consegue definir sua posição inicial (como por exemplo uma posição inicial para a embarcação ir avante, quando o barco ligar), mas ele sabe girar tantos graus para um lado e retornar de onde ele começou. Resolvemos esse problema com outro sensor que será apresentado posteriormente.
@@ -148,7 +148,7 @@ Pinagem
   :width: 400
   :alt: Conexções da Ponte H
 
-.. note:: O DATASHEET DESSA PONTE HESTÁ ERRADA! **UTILIZE AS INSTRUÇÕES ABAIXO!!!!!**.   
+.. note:: O DATASHEET DESSA PONTE H ESTÁ ERRADA! **UTILIZE AS INSTRUÇÕES ABAIXO!!!!!**.   
 
 Agora falando sobre pinagem, vemos que ele possui 8 pinos de controle e são utilizados da seguinte forma:
 
@@ -160,12 +160,28 @@ Agora falando sobre pinagem, vemos que ele possui 8 pinos de controle e são uti
 
 * Pinos 2(LPWM) e 1(RPWM): controlam o sinal de enable em cada sentido de rotação (HIGH/LOW INPUT)
 
-.. note:: **!!NUNCA LIGUE OS PINOS 4, 3 , 2 e 1 NO HIGH AO MESMO TEMPO**. quando queremos liga o motor no sentido horário mandamos um sinal de VCC (HIGH) para RPWM e um sinal de GND (0v) para o LPWM, e para o sentido oposto basta fazer a logia oposta. Os pinos 4 e 3 são **OS SINAIS PWM!**. 
+.. note:: **!!NUNCA LIGUE OS PINOS 4, 3 , 2 e 1 NO HIGH AO MESMO TEMPO**. quando queremos liga o motor no sentido horário mandamos um sinal de VCC (HIGH) para RPWM e um sinal de GND (0v) para o LPWM, e para o sentido oposto basta fazer a lógica oposta. Os pinos 4 e 3 são **OS SINAIS PWM!**. 
   
 Arduino nano
 ------
 
-Escreva aqui
+Esse microcontrolador é o responsável por unir todos esses componentes e fazer todos os cálculo e lógicas necessárias para controlar a posição do motor dc com encoder, ou melhor, controlar a posição de cada azimutal.
+
+Será considerado que neste ponto, você leitor, já possui uma noção de programação em C++ para entender os códigos que virão a seguir.
+
+Primeiramente listamos abaixo todas as bibliotecas utilizadas no Nano:
+
+```console
+#include <Wire.h>
+#include <Arduino.h>
+#include <PIDController.h>
+```
+
+Utilizamos a Wire.h para utilizar conexão I2C, Arduino.h é a biblioteca padrão do arduino, mas como utilizamos o PlataformIO para programar temos que adicioná-la a parte, PIDController.h é um biblioteca própria criada por nós mesmos, onde está programada o controlador PID que mais a frente.
+
+
+
+
 
 .. image:: imagens/arduino_nano.png
   :align: center
@@ -190,6 +206,8 @@ Escreva aqui
 Controle PID
 ------
 
-Esse controle faz parte da teoria de engenharia de controle, é um controle que une as ações proporcional, integrativo e derivativo. Caso não tenha interesse -> apenas use o código que irá funcionar :D
+Esse controle faz parte da teoria de engenharia de controle, é um controle que une as ações proporcional, integrativo e derivativo. 
+
+Caso não tenha interesse -> apenas use o código que irá funcionar :D
 
 
