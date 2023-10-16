@@ -67,7 +67,7 @@ A placa da Heltec possui um módulo LoRa e uma antena, o que facilita a nossa ut
 
 .. note:: Existem tutoriais para instalação da placa Heltec ESP 32 LoRa pela Internet, mas no projeto utilizamos a https://github.com/Heltec-Aaron-Lee/WiFi_Kit_series/releases/download/0.0.7/package_heltec_esp32_index.json
 
-No projeto, utilizamos uma placa dentro da embarcação como o microcontrolador central, que comandará os azimutais (mais detalhes na guia `Propulsor Azimutal <https://docs.polinautico.com/projects/Kraken/pt_BR/latest/radio_controle.html>`_) e coletará os dados da telemetria para transmitir. Também é necessária uma placa em terra para se conectar ao computador e receber as informações.
+No projeto, utilizamos uma placa dentro da embarcação como o microcontrolador central, que comandará os azimutais (mais detalhes na guia `Radio Controle <https://docs.polinautico.com/projects/Kraken/pt_BR/latest/radio_controle.html>`_) e coletará os dados da telemetria para transmitir. Também é necessária uma placa em terra para se conectar ao computador e receber as informações.
 
 .. image:: imagens/esp32pinout.png
   :align: center
