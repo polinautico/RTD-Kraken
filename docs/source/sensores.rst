@@ -94,7 +94,9 @@ Sua "programação" se baseia em fluxo de dados num editor web gráfico, que aux
 .. note:: É possível achar N tutoriais de como baixar o Node-Red, já que ele funciona como um "servidor" ou uma página web hospedada na sua máquina, seja ela um compputador, um celular ou um Raspberry. Nessa documentação, não trataremos sobre como baixar a ferramenta nesses dispositivos.
 
 Em nosso projeto, utilizamos o seguinte fluxo de dados, contendo os componentes:
+
 * Serial In: recebe os dados vindo de um componente (Heltec LoRa em terra) através de uma entrada USB ou Serial Port (as mesmas COM's que você usa para ver o Serial Monitor do Arduino);
 * JSon: Node que converte os dados recebidos para json object, afim de conseguir realizar a leitura dos dados recebidos e mostrá-los na dashboard;
 * Function1: recebe uma função JavaScript para analisar um String JSON e constroi um objeto JavaScript para o que descreve a String;
-* Function2:
+* Function2/Function3: recebe e filtra apenas os dados de tensão e temperatura, respectivamente, e envia aos Nodes da dashboard;
+* Gauge/Chart: exibe os dados no medidor em tempo real e mostra a variação com o tempo no gráfico
