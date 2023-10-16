@@ -67,16 +67,11 @@ A placa da Heltec possui um módulo LoRa e uma antena, o que facilita a nossa ut
 
 .. note:: Existem tutoriais para instalação da placa Heltec ESP 32 LoRa pela Internet, mas no projeto utilizamos a https://github.com/Heltec-Aaron-Lee/WiFi_Kit_series/releases/download/0.0.7/package_heltec_esp32_index.json
 
-No projeto, utilizamos uma placa dentro da embarcação como o microcontrolador central, que comandará os azimutais (mais detalhes na guia `Propulsor Azimutal <https://docs.polinautico.com/projects/Kraken/pt_BR/latest/azimutal.html>`_) e coletará os dados da telemetria para transmitir. Também é necessária uma placa em terra para se conectar ao computador e receber as informações.
+No projeto, utilizamos uma placa dentro da embarcação como o microcontrolador central, que comandará os azimutais (mais detalhes na guia `Propulsor Azimutal <https://docs.polinautico.com/projects/Kraken/pt_BR/latest/radio_controle.html>`_) e coletará os dados da telemetria para transmitir. Também é necessária uma placa em terra para se conectar ao computador e receber as informações.
 
 .. image:: imagens/esp32pinout.png
   :align: center
   :width: 500
-
-Esquema de Conexões
------
-9? 99? 999? 9999? G? 3? X? X? X?
-Nautico é foda, Eletricomp reina
 
 Dashboard e Node-Red
 -----
@@ -92,8 +87,14 @@ Exemplo da interface do Node-Red:
 .. image:: imagens/noderedex.png
   :align: center
 
-O Node-Red é uma ferramenta que permite criar "nós" para realizar certas ações, como eventos http, tcp, comunicações serial, twitter, mqtt, etc. Praticamente, ele serve para fazer uma conexão entre sua interface visual e algum dispositivo IoT.
+O Node-Red é uma ferramenta que permite criar nodes ou "nós" para realizar certas ações, como eventos http, tcp, comunicações serial, twitter, mqtt, etc. Praticamente, ele serve para fazer uma conexão entre sua interface visual e algum dispositivo IoT.
 
 Sua "programação" se baseia em fluxo de dados num editor web gráfico, que auxilia a conexão com esses dispositivos através de protocolos ou funções.
 
 .. note:: É possível achar N tutoriais de como baixar o Node-Red, já que ele funciona como um "servidor" ou uma página web hospedada na sua máquina, seja ela um compputador, um celular ou um Raspberry. Nessa documentação, não trataremos sobre como baixar a ferramenta nesses dispositivos.
+
+Em nosso projeto, utilizamos o seguinte fluxo de dados, contendo os componentes:
+* Serial In: recebe os dados vindo de um componente (Heltec LoRa em terra) através de uma entrada USB ou Serial Port (as mesmas COM's que você usa para ver o Serial Monitor do Arduino);
+* JSon: Node que converte os dados recebidos para json object, afim de conseguir realizar a leitura dos dados recebidos e mostrá-los na dashboard;
+* Function1: recebe uma função JavaScript para analisar um String JSON e constroi um objeto JavaScript para o que descreve a String;
+* Function2:
